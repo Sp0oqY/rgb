@@ -1,3 +1,2 @@
-# rgb
-RGB Mood Lamp - RGB LED, Buttons
-Lab 1: Architecture
+# RGB Mood Lamp 
+# Lab 1: Architecture
