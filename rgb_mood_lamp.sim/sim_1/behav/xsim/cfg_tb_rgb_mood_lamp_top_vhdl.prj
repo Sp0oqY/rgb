@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd" \
+"../../../../rgb_mood_lamp.srcs/sources_1/new/controller.vhd" \
+"../../../../rgb_mood_lamp.srcs/sources_1/new/debounce.vhd" \
+"../../../../rgb_mood_lamp.srcs/sources_1/new/pwm.vhd" \
+"../../../../rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd" \
+"../../../../rgb_mood_lamp.srcs/sources_1/new/smoothing.vhd" \
+"../../../../rgb_mood_lamp.srcs/sim_1/new/rgb_mood_lamp_tb.vhd" \
+
+# Do not sort compile order
+nosort

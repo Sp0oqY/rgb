@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Apr 21 18:02:57 2026
+# Process ID         : 23264
+# Current directory  : C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.runs/synth_1
+# Command line       : vivado.exe -log rgb_mood_lamp_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rgb_mood_lamp_top.tcl
+# Log file           : C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.runs/synth_1/rgb_mood_lamp_top.vds
+# Journal file       : C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-USFQI5UP
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+# CPU Frequency      : 1800 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8461 MB
+# Swap memory        : 21330 MB
+# Total Virtual      : 29791 MB
+# Available Virtual  : 5453 MB
+#-----------------------------------------------------------
+source rgb_mood_lamp_top.tcl -notrace

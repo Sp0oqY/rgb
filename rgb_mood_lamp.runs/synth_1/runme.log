@@ -1,0 +1,235 @@
+
+*** Running vivado
+    with args -log rgb_mood_lamp_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rgb_mood_lamp_top.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Apr 21 18:02:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source rgb_mood_lamp_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 525.621 ; gain = 219.141
+Command: synth_design -top rgb_mood_lamp_top -part xc7a50ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19296
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1071.652 ; gain = 534.219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rgb_mood_lamp_top' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:15]
+	Parameter N_PERIODS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'clk_en' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd:4' bound to instance 'clk_en_ins' of component 'clk_en' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'clk_en' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd:13]
+	Parameter N_PERIODS bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk_en' (0#1) [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd:13]
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/debounce.vhd:4' bound to instance 'debounce_inst' of component 'debounce' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/debounce.vhd:17]
+	Parameter N_PERIODS bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'clk_en' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd:4' bound to instance 'clock_0' of component 'clk_en' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/debounce.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'clk_en__parameterized1' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd:13]
+	Parameter N_PERIODS bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk_en__parameterized1' (0#1) [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/debounce.vhd:17]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/controller.vhd:5' bound to instance 'controller_inst' of component 'controller' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/controller.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'controller' (0#1) [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/controller.vhd:19]
+INFO: [Synth 8-3491] module 'smoothing' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/smoothing.vhd:5' bound to instance 'smoothing_inst' of component 'smoothing' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'smoothing' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/smoothing.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'smoothing' (0#1) [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/smoothing.vhd:17]
+INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/pwm.vhd:6' bound to instance 'pwm_red' of component 'PWM' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'pwm' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/pwm.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'pwm' (0#1) [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/pwm.vhd:13]
+INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/pwm.vhd:6' bound to instance 'pwm_green' of component 'PWM' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:154]
+INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/pwm.vhd:6' bound to instance 'pwm_blue' of component 'PWM' [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:163]
+INFO: [Synth 8-256] done synthesizing module 'rgb_mood_lamp_top' (0#1) [C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd:15]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1191.777 ; gain = 654.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1191.777 ; gain = 654.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a50ticsg324-1L
+INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.777 ; gain = 654.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1191.777 ; gain = 654.344
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 7     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   8 Input    8 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 3     
+	   8 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:15 . Memory (MB): peak = 1386.488 ; gain = 849.055
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:16 . Memory (MB): peak = 1386.488 ; gain = 849.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 1386.488 ; gain = 849.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    15|
+|3     |LUT1   |    13|
+|4     |LUT2   |    27|
+|5     |LUT3   |     9|
+|6     |LUT4   |    75|
+|7     |LUT5   |     3|
+|8     |LUT6   |     8|
+|9     |FDRE   |    65|
+|10    |IBUF   |     2|
+|11    |OBUF   |     3|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+-----------+------+
+|      |Instance          |Module     |Cells |
++------+------------------+-----------+------+
+|1     |top               |           |   221|
+|2     |  clk_en_ins      |clk_en     |    18|
+|3     |  controller_inst |controller |    62|
+|4     |  pwm_blue        |pwm        |     2|
+|5     |  pwm_green       |pwm_0      |     2|
+|6     |  pwm_red         |pwm_1      |    31|
+|7     |  smoothing_inst  |smoothing  |   100|
++------+------------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:31 . Memory (MB): peak = 1617.168 ; gain = 1079.734
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1632.199 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1740.148 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6aca4a62
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:41 . Memory (MB): peak = 1740.148 ; gain = 1214.527
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1740.148 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.runs/synth_1/rgb_mood_lamp_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file rgb_mood_lamp_top_utilization_synth.rpt -pb rgb_mood_lamp_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 18:05:12 2026...

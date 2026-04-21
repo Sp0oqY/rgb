@@ -1,0 +1,16 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sim_1/new/clk_en_tb.vhd,1776694396,vhdl,,,,cfg_tb_clk_en;tb_clk_en,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sim_1/new/controller_tb.vhd,1776805659,vhdl,,,,cfg_tb_controller;tb_controller,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sim_1/new/debounce_tb.vhd,1776722416,vhdl,,,,cfg_tb_debounce;tb_debounce,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sim_1/new/pwm_tb.vhd,1776678038,vhdl,,,,cfg_tb_pwm;tb_pwm,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sim_1/new/rgb_mood_lamp_tb.vhd,1776809196,vhdl,,,,cfg_tb_rgb_mood_lamp_top;tb_rgb_mood_lamp_top,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd,1776603443,vhdl,,,,cfg_tb_smoothing;tb_smoothing,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/clk_en.vhd,1776768103,vhdl,,,,clk_en,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/controller.vhd,1776807098,vhdl,,,,controller,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/debounce.vhd,1776769222,vhdl,,,,debounce,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/pwm.vhd,1776611551,vhdl,,,,pwm,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd,1776807945,vhdl,,,,rgb_mood_lamp_top,,,,,,,,
+C:/Users/vikto/rgb_mood_lamp/rgb_mood_lamp.srcs/sources_1/new/smoothing.vhd,1776602131,vhdl,,,,smoothing,,,,,,,,
