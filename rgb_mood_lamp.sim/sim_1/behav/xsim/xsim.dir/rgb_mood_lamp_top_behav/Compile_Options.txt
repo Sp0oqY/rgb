@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "rgb_mood_lamp_top_behav" "xil_defaultlib.rgb_mood_lamp_top" -log "elaborate.log" 
