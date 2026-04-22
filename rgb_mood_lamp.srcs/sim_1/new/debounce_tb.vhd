@@ -13,7 +13,7 @@ architecture tb of tb_debounce is
 
     component debounce
         port (clk        : in std_logic;
-              rst        : in std_logic;
+              btnl        : in std_logic;
               btnc_in    : in std_logic;
               btnu_in    : in std_logic;
               btnd_in    : in std_logic;
@@ -23,7 +23,7 @@ architecture tb of tb_debounce is
     end component;
 
     signal clk        : std_logic;
-    signal rst        : std_logic;
+    signal btnl        : std_logic;
     signal btnc_in    : std_logic;
     signal btnu_in    : std_logic;
     signal btnd_in    : std_logic;
@@ -39,7 +39,7 @@ begin
 
     dut : debounce
     port map (clk        => clk,
-              rst        => rst,
+              btnl        => btnl,
               btnc_in    => btnc_in,
               btnu_in    => btnu_in,
               btnd_in    => btnd_in,
@@ -62,24 +62,21 @@ begin
 
         -- Reset generation
         -- ***EDIT*** Check that rst is really your reset signal
-        rst <= '1';
+        btnl <= '1';
         wait for 100 ns;
-        rst <= '0';
+        btnl <= '0';
         wait for 100 ns;
         
-         -- BTN C
         btnc_in <= '1';
         wait for 5 us;
         btnc_in <= '0';
         wait for 2 us;
     
-        -- BTN U
         btnu_in <= '1';
         wait for 5 us;
         btnu_in <= '0';
         wait for 2 us;
     
-        -- BTN D
         btnd_in <= '1';
         wait for 5 us;
         btnd_in <= '0';

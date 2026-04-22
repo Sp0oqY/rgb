@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity pwm is
     Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
+           btnl : in STD_LOGIC;
            duty_cycle : in STD_LOGIC_VECTOR (7 downto 0);
            pwm_out : out STD_LOGIC);
 end pwm;
@@ -17,7 +17,7 @@ begin
     process(clk)
     begin
         if rising_edge(clk) then
-            if rst = '1' then
+            if btnl = '1' then
                  counter <= (others => '0');
                  pwm_out <= '0';
             else

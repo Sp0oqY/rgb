@@ -19,7 +19,7 @@ architecture Behavioral of rgb_mood_lamp_top is
         generic ( N_PERIODS : integer );
         port (
             clk   : in    std_logic;
-            rst   : in    std_logic;
+            btnl   : in    std_logic;
             en : out   std_logic
         );
     end component;
@@ -28,7 +28,7 @@ architecture Behavioral of rgb_mood_lamp_top is
     component debounce is
         port (
             clk      : in    std_logic;
-            rst      : in    std_logic;
+            btnl      : in    std_logic;
             btnc_in  : in    std_logic;
             btnu_in    : in   std_logic;
             btnd_in : in   std_logic;
@@ -42,7 +42,7 @@ architecture Behavioral of rgb_mood_lamp_top is
     component controller is
         port (
             clk   : in    std_logic;
-            rst   : in    std_logic;
+            btnl   : in    std_logic;
             ce    : in    std_logic;
             mode : in   std_logic_vector (2 downto 0);
             bright : in   std_logic_vector (7 downto 0);
@@ -57,7 +57,7 @@ architecture Behavioral of rgb_mood_lamp_top is
     component smoothing is
         port (
             clk   : in    std_logic;
-            rst   : in    std_logic;
+            btnl   : in    std_logic;
             ce    : in    std_logic;
             target_r : in std_logic_vector (7 downto 0);
             target_g : in std_logic_vector (7 downto 0);
@@ -72,7 +72,7 @@ architecture Behavioral of rgb_mood_lamp_top is
     component PWM is
         port (
             clk   : in    std_logic;
-            rst   : in    std_logic;
+            btnl   : in    std_logic;
             duty_cycle : in std_logic_vector (7 downto 0);
             pwm_out : out std_logic
         );
@@ -96,7 +96,7 @@ begin
         generic map ( N_PERIODS => 100 )
         port map (
             clk   => clk,
-            rst   => btnl,
+            btnl   => btnl,
             en => sig_en
         );
 
@@ -104,7 +104,7 @@ begin
     debounce_inst : debounce
         port map (
             clk => clk, 
-            rst => btnl,
+            btnl => btnl,
             btnc_in => btnc, 
             btnu_in => btnu, 
             btnd_in => btnd,
@@ -117,7 +117,7 @@ begin
     controller_inst : controller
         port map (
             clk => clk, 
-            rst => btnl,
+            btnl => btnl,
             ce => sig_en,
             mode => "111", 
             bright => x"FF",
@@ -131,7 +131,7 @@ begin
     smoothing_inst : smoothing
         port map (
             clk => clk, 
-            rst => btnl,
+            btnl => btnl,
             ce => sig_en,
             target_r => sig_target_r,
             target_g => sig_target_g,
@@ -145,7 +145,7 @@ begin
     pwm_red : pwm
         port map (
             clk => clk, 
-            rst => btnl,
+            btnl => btnl,
             duty_cycle => sig_current_r,
             pwm_out => LED16_r
         );
@@ -154,7 +154,7 @@ begin
     pwm_green : pwm
         port map (
             clk => clk, 
-            rst => btnl,
+            btnl => btnl,
             duty_cycle => sig_current_g,
             pwm_out => LED16_g
         );
@@ -163,7 +163,7 @@ begin
     pwm_blue : pwm
         port map (
             clk => clk, 
-            rst => btnl,
+            btnl => btnl,
             duty_cycle => sig_current_b,
             pwm_out => LED16_b
         );

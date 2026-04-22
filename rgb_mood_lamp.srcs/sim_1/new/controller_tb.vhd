@@ -13,7 +13,7 @@ architecture tb of tb_controller is
 
     component controller
         port (clk      : in std_logic;
-              rst      : in std_logic;
+              btnl      : in std_logic;
               mode     : in std_logic_vector (2 downto 0);
               bright   : in std_logic_vector (7 downto 0);
               speed    : in std_logic_vector (7 downto 0);
@@ -24,7 +24,7 @@ architecture tb of tb_controller is
     end component;
 
     signal clk      : std_logic;
-    signal rst      : std_logic;
+    signal btnl      : std_logic;
     signal mode     : std_logic_vector (2 downto 0);
     signal bright   : std_logic_vector (7 downto 0);
     signal speed    : std_logic_vector (7 downto 0);
@@ -41,7 +41,7 @@ begin
 
     dut : controller
     port map (clk      => clk,
-              rst      => rst,
+              btnl      => btnl,
               mode     => mode,
               bright   => bright,
               speed    => speed,
@@ -66,70 +66,47 @@ begin
 
         -- Reset generation
         -- ***EDIT*** Check that rst is really your reset signal
-        rst <= '1';
+        btnl <= '1';
         wait for 100 ns;
-        rst <= '0';
+        btnl <= '0';
         wait for 100 ns;
         
-           -- základné nastavenie
         ce     <= '1';
-        bright <= x"FF";  -- max jas, aby bolo všetko dobre vidieť
-        speed  <= x"04";  -- pre auto fade
+        bright <= x"FF";  
+        speed  <= x"04"; 
         mode   <= "000";
     
-        -- reset
-        rst <= '1';
-        wait for 100 ns;
-        rst <= '0';
-        wait for 100 ns;
-    
-        --------------------------------------------------
         -- 000 OFF
-        --------------------------------------------------
         mode <= "000";
         wait for 500 ns;
     
-        --------------------------------------------------
         -- 001 RED
-        --------------------------------------------------
         mode <= "001";
         wait for 500 ns;
-    
-        --------------------------------------------------
+
         -- 010 GREEN
-        --------------------------------------------------
         mode <= "010";
         wait for 500 ns;
     
-        --------------------------------------------------
         -- 011 BLUE
-        --------------------------------------------------
         mode <= "011";
         wait for 500 ns;
     
-        --------------------------------------------------
         -- 100 YELLOW
-        --------------------------------------------------
         mode <= "100";
         wait for 500 ns;
     
-        --------------------------------------------------
         -- 101 CYAN
-        --------------------------------------------------
         mode <= "101";
         wait for 500 ns;
     
-        --------------------------------------------------
         -- 110 MAGENTA
-        --------------------------------------------------
         mode <= "110";
         wait for 500 ns;
     
-        --------------------------------------------------
         -- 111 AUTO FADE
-        --------------------------------------------------
         mode <= "111";
-        wait for 500 ns;  -- nech je vidno prechod
+        wait for 500 ns; 
     
         -- ***EDIT*** Add stimuli here
         wait for 100 * TbPeriod;

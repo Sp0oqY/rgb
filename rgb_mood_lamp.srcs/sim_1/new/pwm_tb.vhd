@@ -13,13 +13,13 @@ architecture tb of tb_pwm is
 
     component pwm
         port (clk        : in std_logic;
-              rst        : in std_logic;
+              btnl        : in std_logic;
               duty_cycle : in std_logic_vector (7 downto 0);
               pwm_out    : out std_logic);
     end component;
 
     signal clk        : std_logic;
-    signal rst        : std_logic;
+    signal btnl        : std_logic;
     signal duty_cycle : std_logic_vector (7 downto 0);
     signal pwm_out    : std_logic;
 
@@ -31,7 +31,7 @@ begin
 
     dut : pwm
     port map (clk        => clk,
-              rst        => rst,
+              btnl        => btnl,
               duty_cycle => duty_cycle,
               pwm_out    => pwm_out);
 
@@ -46,9 +46,9 @@ begin
    
         duty_cycle <= (others => '0');
     
-        rst <= '1';
+        btnl <= '1';
         wait for 100 ns;
-        rst <= '0';
+        btnl <= '0';
         wait for 100 ns;
     
         -- 25% duty cycle

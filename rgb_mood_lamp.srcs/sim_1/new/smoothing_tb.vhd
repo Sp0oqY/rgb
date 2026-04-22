@@ -1,3 +1,8 @@
+-- Testbench automatically generated online
+-- at https://vhdl.lapinoo.net
+-- Generation date : Sun, 19 Apr 2026 20:50:17 GMT
+-- Request id : cfwk-fed377c2-69e54009f0d66
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -8,7 +13,7 @@ architecture tb of tb_smoothing is
 
     component smoothing
         port (clk       : in std_logic;
-              rst       : in std_logic;
+              btnl       : in std_logic;
               ce        : in std_logic;
               target_r  : in std_logic_vector (7 downto 0);
               target_g  : in std_logic_vector (7 downto 0);
@@ -19,7 +24,7 @@ architecture tb of tb_smoothing is
     end component;
 
     signal clk       : std_logic;
-    signal rst       : std_logic;
+    signal btnl       : std_logic;
     signal ce        : std_logic;
     signal target_r  : std_logic_vector (7 downto 0);
     signal target_g  : std_logic_vector (7 downto 0);
@@ -36,7 +41,7 @@ begin
 
     dut : smoothing
     port map (clk       => clk,
-              rst       => rst,
+              btnl       => btnl,
               ce        => ce,
               target_r  => target_r,
               target_g  => target_g,
@@ -61,27 +66,28 @@ begin
 
         -- Reset generation
         -- ***EDIT*** Check that rst is really your reset signal
-        rst <= '1';
+        btnl <= '1';
         wait for 100 ns;
-        rst <= '0';
+        btnl <= '0';
         ce <= '1';
         wait for 100 ns;
 
         -- ***EDIT*** Add stimuli here
         wait for 100 ns;
-        -- prvá farba
+        
+        -- RED
         target_r <= x"FF";
         target_g <= x"00";
         target_b <= x"00";
         wait for 2 us;
         
-        -- druhá farba
+        -- GREEN
         target_r <= x"00";
         target_g <= x"FF";
         target_b <= x"00";
         wait for 2 us;
         
-        -- tretia farba
+        -- BLUE
         target_r <= x"00";
         target_g <= x"00";
         target_b <= x"FF";

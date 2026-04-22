@@ -6,7 +6,7 @@ entity clk_en is
         N_PERIODS : positive := 200000  
   );
     Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
+           btnl : in STD_LOGIC;
            en : out STD_LOGIC);
 end clk_en;
 
@@ -18,7 +18,7 @@ begin
     begin
 
         if (rising_edge(clk)) then     
-            if (rst = '1') then    
+            if (btnl = '1') then    
                 sig_count <= 0;
 
             elsif (sig_count < (N_PERIODS - 1)) then

@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity debounce is
     Port ( 
          clk        : in  STD_LOGIC;
-         rst        : in  STD_LOGIC;
+         btnl        : in  STD_LOGIC;
          btnc_in    : in  STD_LOGIC; 
          btnu_in    : in  STD_LOGIC;
          btnd_in    : in  STD_LOGIC;
@@ -23,7 +23,7 @@ architecture Behavioral of debounce is
         generic ( N_PERIODS : positive );
         port (
             clk : in  std_logic;
-            rst : in  std_logic;
+            btnl : in  std_logic;
             en  : out std_logic
         );
     end component clk_en;
@@ -48,14 +48,14 @@ begin
         generic map ( N_PERIODS => C_MAX )
         port map (
             clk => clk,
-            rst => rst,
+            btnl => btnl,
             en  => ce_sample
         );
 
     p_debounce : process(clk)
     begin
         if rising_edge(clk) then
-            if rst = '1' then
+            if btnl = '1' then
 
                 sync0_c <= '0'; sync1_c <= '0'; shift_reg_c <= (others => '0'); debounced_c <= '0';
                 sync0_u <= '0'; sync1_u <= '0'; shift_reg_u <= (others => '0'); debounced_u <= '0';

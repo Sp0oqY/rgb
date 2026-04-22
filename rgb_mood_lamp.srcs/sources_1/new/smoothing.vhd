@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity smoothing is
     Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
+           btnl : in STD_LOGIC;
            ce : in STD_LOGIC;
            target_r : in STD_LOGIC_VECTOR (7 downto 0);
            target_g : in STD_LOGIC_VECTOR (7 downto 0);
@@ -23,7 +23,7 @@ begin
     process(clk)
     begin
         if rising_edge(clk) then
-            if rst = '1' then
+            if btnl = '1' then
                 r_reg <= (others => '0');
                 g_reg <= (others => '0');
                 b_reg <= (others => '0');

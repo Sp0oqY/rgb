@@ -56,24 +56,19 @@ begin
 
     stimuli : process
 begin
-    -- inicializácia
+
     btnu <= '0';
     btnc <= '0';
     btnd <= '0';
     btnl <= '0';
     wait for 100 ns;
 
-    --------------------------------------------------
     -- RESET
-    --------------------------------------------------
     btnl <= '1';
     wait for 10 us;
     btnl <= '0';
     wait for 1 ms ;
 
-    --------------------------------------------------
-    -- zvýšenie jasu (viackrát ručne)
-    --------------------------------------------------
     btnu <= '1'; wait for 5 ms;
     btnu <= '0'; wait for 10 ms;
 
@@ -86,9 +81,6 @@ begin
     btnu <= '1'; wait for 5 ms;
     btnu <= '0'; wait for 10 ms;
 
-    --------------------------------------------------
-    -- prepínanie módov
-    --------------------------------------------------
 
     -- RED
     btnc <= '1'; wait for 5 ms;

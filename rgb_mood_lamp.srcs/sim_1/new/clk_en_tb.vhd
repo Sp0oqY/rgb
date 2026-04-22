@@ -13,7 +13,7 @@ architecture tb of tb_clk_en is
 
     component clk_en
         port (clk : in std_logic;
-              rst : in std_logic;
+              btnl : in std_logic;
               en  : out std_logic);
     end component;
 
@@ -29,7 +29,7 @@ begin
 
     dut : clk_en
     port map (clk => clk,
-              rst => btnl,
+              btnl => btnl,
               en  => en);
 
     -- Clock generation
