@@ -15,9 +15,7 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce
 Úprava README.md, návrh architektúry, programovanie častí: smoothing, PWM, rgb_mood_lamp_top, clk_en, controller
 
 ## Lab 1
-<img width="1307" height="597" alt="top_level_schematic" src="https://github.com/user-attachments/assets/f296e955-0ce6-4d35-b63b-75a03cbffa5d" />
-
-
+<img width="1545" height="698" alt="top_level_schematic (2)" src="https://github.com/user-attachments/assets/6bed71e7-4588-4671-b917-3710d79b89f6" />
 
 ### RGB Mood Lamp <br>
 
